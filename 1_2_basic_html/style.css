@@ -1,8 +1,7 @@
-
 body {
   font-family: "Source Sans Pro", sans-serif;
-  font-size: 16px;
-  padding: 1em;
+  font-size: 19px;
+  padding: 3em;
 }
 
 h1 {
@@ -17,4 +16,34 @@ h3 {
 
 p {
   font-size: 1em;
+}
+
+tr {
+  font-size: 2em;
+  margin: 0.35em 0
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  border: 1px solid rgb(107, 75, 247);
+}
+
+td {
+  border: 1px solid rgb(106, 21, 99);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+svg {
+  border: 1px solid rgb(106, 21, 99);
+  overflow: hidden;
+  white-space: nowrap;
+
+
+}
+
+.MainHeader {
+  background-color: rgb(57, 174, 149);
 }
