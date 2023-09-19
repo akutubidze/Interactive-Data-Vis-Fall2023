@@ -1,4 +1,80 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+html,
 body {
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.body {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.body h1 {
+  margin-bottom: 15px;
+  font-size: 70px;
+}
+
+.btn button {
+  border-radius: 5px;
+  color: rgb(35, 30, 25);
+  padding: 10px 35px;
+  border: 0;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0 5px;
+}
+
+button#Decrease {
+  background: rgb(208, 107, 107)
+}
+
+button#Decrease:hover {
+  background: rgb(220, 60, 60)
+}
+
+button#Increase {
+  background: rgb(208, 107, 107)
+}
+
+button#Increase:hover {
+  background: rgb(220, 60, 60)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+. body {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 16px;
   padding: 1em;
