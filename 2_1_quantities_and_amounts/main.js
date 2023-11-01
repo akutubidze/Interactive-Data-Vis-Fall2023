@@ -52,6 +52,7 @@ d3.csv('../data/MoMA_topTenNationalities.csv', d3.autoType)
       .style("fill", color);
 
 
+
     console.log(bars)
 
 
