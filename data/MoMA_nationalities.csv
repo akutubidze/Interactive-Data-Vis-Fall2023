@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Nationality,States,Count
 American,United States of America,5181
 German,Germany,965
@@ -118,3 +119,125 @@ Tanzanian,Tanzania,1
 Kenyan,Kenya,1
 Beninese,Benin,1
 Kuwaiti,Kuwait,1
+=======
+Nationality,Country,Count
+American,United States of America,5181
+German,Germany,965
+British,Britain,860
+French,French,847
+Italian,Italy,536
+Japanese,Japan,507
+Swiss,Switzerland,297
+Dutch,The Netherlands,274
+Russian,Russia,262
+Austrian,Austria,239
+Canadian,Canada,189
+Brazilian,Brazil ,167
+Unknown,Unknown,161
+Spanish,Spain,157
+Argentine,Argentina,142
+Mexican,Mexico,135
+Polish,Poland,131
+Swedish,Sweden,128
+Danish,Denmark,121
+Chinese,China,101
+Belgian,Belgian,96
+Czech,Czech Republic,78
+Israeli,Israel,75
+Chilean,Chile,70
+South African,South Africa,67
+Cuban,Cuba,64
+Venezuelan,Venezuela,62
+Finnish,Finland,62
+Australian,Australia,55
+Colombian,Columbia,54
+Hungarian,Hungary,53
+Norwegian,Norway,49
+Indian,India,39
+Peruvian,Peru,39
+Croatian,Croatia,34
+Korean,Korea,31
+Irish,Ireland,24
+Uruguayan,Uruguay,23
+Turkish,Turkey,20
+Scottish,Scotland,20
+Romanian,Romania,19
+Haitian,Haiti,17
+Slovenian,Slovenia,17
+Serbian,Serbia,16
+New Zealander,New Zealand,16
+Ukrainian,Ukraine,13
+Icelandic,Iceland,12
+Egyptian,Egypt,11
+Iranian,Iran,11
+Greek,Greece,11
+Portuguese,Portugal,10
+Native American,United States of America,10
+Lebanese,Lebanon,9
+Slovak,Slovakia,8
+Puerto Rican,Puerto Rico,7
+Guatemalan,Guatemala,7
+Bosnian,Bosnia,6
+Moroccan,Morocco,6
+Georgian,Georgia,6
+Congolese,Congo,6
+Nigerian,Nigeria,6
+Vietnamese,Vietnam,5
+Taiwanese,Taiwan,5
+Bulgarian,Bulgaria,5
+Zimbabwean,Zimbabwe,5
+Czechoslovakian,Czech Republic,5
+Macedonian,Macedonia,4
+Ecuadorian,Ecuador,4
+Pakistani,Pakistan,4
+Palestinian,Palestine,4
+Bolivian,Bolivia,3
+Estonian,Estonia,3
+Algerian,Algeria,3
+Lithuanian,Lithuania,3
+Albanian,Albania,3
+Luxembourger,Luxembourg,3
+Filipino,Philippines,3
+Welsh,United Kingdom,3
+Latvian,Latvia,3
+Canadian Inuit,Canadian,3
+Malian,Italian,3
+Ghanaian,Ghana,3
+Ethiopian,Ethiopia,2
+Nicaraguan,Nicaragua,2
+Namibian,Namibia,2
+Iraqi,Iraq,2
+Tunisian,Tunisia,2
+Senegalese,Senegal,2
+Sudanese,Sudan,2
+Emirati,United Arab Emirates,2
+Kyrgyz,Kyrgyzstan,2
+Singaporean,Singapore,2
+Thai,Thailand,2
+Costa Rican,Costa Rica,2
+Cameroonian,Cameroon,2
+Azerbaijani,Azerbaijan,2
+Salvadoran,Salvador,2
+Malaysian,Malaysia,2
+Panamanian,Panama,2
+Paraguayan,Paraguay,2
+Ivorian,Ivory Coast,1
+Ugandan,Uganda,1
+Cambodian,Cambodia,1
+Cypriot,Cyprus No Mans Area,1
+Sierra Leonean,Sierra Leone,1
+Coptic,Sudan,1
+Yugoslav,Yugoslavia,1
+Mozambican,Mozambique,1
+Persian,Persia,1
+Bahamian,The Bahamas,1
+Bangladeshi,Bangladesh,1
+Sahrawi,United Arab Emirates,1
+Burkinabé,Burkina Faso,1
+Catalan,Spain,1
+Afghan,Afghanistan,1
+Tanzanian,Tanzania,1
+Kenyan,Kenya,1
+Beninese,Benin,1
+Kuwaiti,Kuwait,1
+>>>>>>> 331edb4fa81e622ea378638b292cf3504f35a102
