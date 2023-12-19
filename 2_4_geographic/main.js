@@ -12,9 +12,12 @@ Promise.all([
   d3.csv("../data/MoMA_nationalities.csv", d3.autoType),
 ]).then(([geojson, nationalities]) => {
 
-  console.log('geojson, nationalities', geojson, nationalities)
+  console.log(nationalities)
 
-  const countriesFromCSV = new Set(nationalities.map(d => d.States));
+  const Countries = new Set(nationalities.map(d => d.Country));
+
+
+  console.log(Countries)
 
   const svg = d3.select("#container")
     .append("svg")
@@ -27,44 +30,28 @@ Promise.all([
   // SPECIFY PROJECTION
   const projection = d3.geoEquirectangular()
     .fitSize([width, height], geojson)
+
   console.log(projection)
 
   // DEFINE PATH FUNCTION
-  const pathGen = d3.geoPath().projection(projection)
+  const pathGenFn = d3.geoPath().projection(projection)
 
 
   // APPEND GEOJSON PATH  
-  const countries = svg
+  const states = svg
     .selectAll("path.state")
     .data(geojson.features)
     .attr("class", 'state')
     .join("path")
-    .attr("d", pathGen)
+    .attr("d", pathGenFn)
     .attr("stroke", 'black')
-    // .attr("fill", "transparent")
-    .attr("fill", d => countriesFromCSV.has(d.properties.name) ? "lightgreen" : "lightyellow");
-  //ეს ფროფერთის სახელი აღებულია ჯიოჯეისონიდან
+    .attr("fill", d => Countries.has(d.properties.name) ? "green" : "transparent");
 
+  // svg.append("circle")
+  //   .attr("r", 20)
+  //   .attr("transform", () => {
+  //     const [x, y] = projection([Count])
+  //     return `translate(${x}, ${y})`
+  //   })
 
-
-  //append  circles დრო თუ მექნა აქ დავამატო წრეები
-  //     svg.append("circle")
-  //     .attr()
-  //       .attr("transform", ( )=> {const [x,y] = projection([]) 
-  //       return `translate(${x}, ${y})`
-
-  //     })
-
-  // svg.selectAll("circle.nationality")
-  // .data(nationalities)
-  // .join("circle")
-  // .attr("class", "nationality")
-  // .attr("r", 5)
-  // d=>{const [x,y] = projection([d.]) 
-  //   return `translate(${x}, ${y})`
-
-
-  console.log(countries)
-  // APPEND DATA AS SHAPE
-
-});
+})
