@@ -86,9 +86,8 @@ d3.csv(['../data/Gini_USA.csv'], (d) => {
     .data(data) // 
     .join("path")
     .attr("class", 'line')
-    .attr("fill", "none")
     .attr("fill", "green")
-    .attr("stroke", "green")
+    .attr("stroke", "black")
     .attr("stroke-width", 2.5)
     .attr("d", areaGen(data))
 
