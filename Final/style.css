@@ -1,0 +1,39 @@
+body {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 16px;
+    padding: 4em 2rem;
+    padding-top: 0;
+}
+
+h1 {
+    font-size: 3em;
+    margin: 0.25em 0;
+}
+
+h3 {
+    font-size: 2em;
+    margin: 0.25em 0;
+}
+
+p {
+    font-size: 1em;
+}
+
+#chart-1-container {
+    padding-left: 150px;
+    margin-top: 0;
+}
+
+#chart-1-container  > svg{
+    transform: scale(0.8);
+
+}
+
+#chart-1-container  svg g text{
+    font-size: 20px;
+    /* color: red; */
+}
+#chart-2-container {
+    padding-left: 120px;
+    margin-top: 0;
+}

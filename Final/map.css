@@ -1,0 +1,48 @@
+#map {
+    height: 600px;
+    width: 100%;
+    margin-top: 20px;
+
+    border: 5px  dashed   orange;
+
+}
+
+#locations {
+    min-width: 250px;
+
+    /* padding-left: 30px; */
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+
+}
+
+.select-container{
+    display: flex;
+    gap: 20px;
+}
+
+#locations a {
+    font-weight: bold;
+    color: black;
+    display: inline-block;
+
+    margin-bottom: 10px;
+
+    font-size: 14px;
+}
+
+.popup-p {
+    font-weight: bold;
+}
+
+.popup-p img {
+    width: 100%;
+}
+
+.map-heading {
+    text-align: center;
+    margin-bottom: 60px;
+}

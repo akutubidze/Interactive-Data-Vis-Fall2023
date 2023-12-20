@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Interactive Data Visualization Tutorial</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro">
+    <link rel="stylesheet" href="map.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+        integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+
+</head>
+
+<body>
+    <h1>Section Final</h1>
+
+
+    <div id="chart-1-container"></div>
+    <div style="margin-top: 150px;">
+        <div id="chart-2-container"></div>
+    </div>
+
+    <h1 class="map-heading">NYC Public Spaces</h1>
+    <div class="container">
+
+        
+        <h1>Location Names</h1>
+
+    <div class="select-container">
+        
+        <select name="artworks-filter" id="artworks-filter">
+            <option value="all">All </option>
+            <option value="without_artworks">without artworks</option>
+        </select>
+        
+        
+        <select name="locations" id="locations">
+            
+        </select>
+    </div>
+
+
+
+
+        <div id="map"></div>
+    </div>
+
+
+    <!-- Javascript -->
+    <script src="../lib/d3.js"></script>
+    <!-- 1) Bar Chart  -->
+    <script src="chart.js"></script>
+    <!-- 2) Line Chart -->
+    <script src="chart2.js"></script>
+    <!-- 3) Donat Chart -->
+
+    <!-- Maps  -->
+
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+
+
+    <script type="module" src="map.js"></script>
+
+</body>
+
+</html>
