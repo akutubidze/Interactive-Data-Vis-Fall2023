@@ -46,12 +46,4 @@ Promise.all([
     .attr("d", pathGenFn)
     .attr("stroke", 'black')
     .attr("fill", d => Countries.has(d.properties.name) ? "green" : "transparent");
-
-  // svg.append("circle")
-  //   .attr("r", 20)
-  //   .attr("transform", () => {
-  //     const [x, y] = projection([Count])
-  //     return `translate(${x}, ${y})`
-  //   })
-
 })
