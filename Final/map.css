@@ -1,60 +1,56 @@
-.map-main-container{
-    /* background-color: red; */
-/* transform: scale(0.8); */
-width: 900px;
-margin: auto;
-
+.map-main-container {
+  /* background-color: red; */
+  /* transform: scale(0.8); */
+  width: 800px;
+  margin: auto;
 }
 
 #map {
-    height: 600px;
-    width: 100%;
-    margin-top: 20px;
+  height: 600px;
+  width: 100%;
+  margin-top: 20px;
 
-    border: 5px  dashed   orange;
-
+  border: 5px solid deepskyblue;
 }
 
-.abc{
-    color: red;
+.abc {
+  color: red;
 }
 
 #locations {
-    min-width: 250px;
+  min-width: 250px;
 
-    /* padding-left: 30px; */
+  /* padding-left: 30px; */
 
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-
-
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
-.select-container{
-    display: flex;
-    gap: 20px;
+.select-container {
+  display: flex;
+  gap: 20px;
 }
 
 #locations a {
-    font-weight: bold;
-    color: black;
-    display: inline-block;
+  font-weight: bold;
+  color: black;
+  display: inline-block;
 
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 
-    font-size: 14px;
+  font-size: 14px;
 }
 
 .popup-p {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .popup-p img {
-    width: 100%;
+  width: 100%;
 }
 
 .map-heading {
-    text-align: center;
-    margin-bottom: 60px;
+  text-align: center;
+  margin-bottom: 60px;
 }
