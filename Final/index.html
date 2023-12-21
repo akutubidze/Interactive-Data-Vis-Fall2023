@@ -13,32 +13,39 @@
 </head>
 
 <body>
-    <h1>Section Final</h1>
+    <div class="text-container">
+        <h1>Section Final</h1>
+        <p>Imagine if every freely accessible public space in New York showcased at least one piece of artwork from the Modern Art Museum of New York. How amazing would that be? To determine the feasibility of this idea, let's delve into the types of artworks within the MoMA collection.
+            The MoMA collection boasts nearly 200,000 works of modern and contemporary art by artists from around the world, encompassing various categories and mediums. The visual representation below provides evidence of the classification of artworks by categories.</p>
+    </div>
 
 
     <div id="chart-1-container"></div>
-    <div style="margin-top: 150px;">
-        <div id="chart-2-container"></div>
+    <div style="margin-top: 20px;">
+        <div id="chart-2-container">
+            <h3>Classification of Artwork Collection by Categories at MoMA</h3>
+        </div>
     </div>
 
     <h1 class="map-heading">NYC Public Spaces</h1>
-    <div class="container">
 
-        
+
+    <!-- Map Html -->
+    <div class="map-main-container">
         <h1>Location Names</h1>
 
-    <div class="select-container">
-        
-        <select name="artworks-filter" id="artworks-filter">
-            <option value="all">All </option>
-            <option value="without_artworks">without artworks</option>
-        </select>
-        
-        
-        <select name="locations" id="locations">
+        <div class="select-container">
             
-        </select>
-    </div>
+            <select name="artworks-filter" id="artworks-filter">
+                <option value="all">All </option>
+                <option value="without_artworks">without artworks</option>
+            </select>
+            
+            
+            <select name="locations" id="locations">
+                
+            </select>
+        </div>
 
 
 
@@ -50,7 +57,7 @@
     <!-- Javascript -->
     <script src="../lib/d3.js"></script>
     <!-- 1) Bar Chart  -->
-    <script src="chart.js"></script>
+    <!-- <script src="chart.js"></script> -->
     <!-- 2) Line Chart -->
     <script src="chart2.js"></script>
     <!-- 3) Donat Chart -->
