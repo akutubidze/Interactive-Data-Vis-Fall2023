@@ -1,78 +1,62 @@
-/* CONSTANTS AND GLOBALS */
-const width = window.innerWidth * 0.8;
 const height = 600;
+const width = 800;
+const margin = { top: 20, bottom: 60, left: 120, right: 40 };
 
-/* LOAD DATA */
-d3.csv("Artworks.csv", d3.autoType).then((data) => {
-  const allDepartments = data.map((d) => d.Department);
-  const uniqueDepartment = Array.from(new Set(allDepartments));
+d3.csv("Sorted.csv", d3.autoType).then((data) => {
+  const allClass = data.map((d) => d.Classification);
+  const uniqueClass = Array.from(new Set(allClass));
 
-  const departmentsData = [];
+  const classData = [];
 
-  uniqueDepartment.forEach((department) => {
+  uniqueClass.forEach((classification) => {
     let count = 0;
 
     data.forEach((row) => {
-      if (row.Department == department) {
+      if (row.Classification == classification) {
         count++;
       }
     });
 
-    departmentsData.push({
-      department: department,
+    classData.push({
+      classification: classification,
       count: count,
     });
   });
-
-  console.log(departmentsData);
-
-  departmentsData.sort((a, b) => a.count - b.count);
-
-  // medium, count
-  // "Crayon on mulberry paper", 40
-  // "Crayon on mulberry paper", 40
-
-  // console.log(allMediums)
-  // console.log(uniqueMediums)
+  classData.sort((a, b) => a.count - b.count).reverse();
 
   /* SCALES */
-  /** This is where you should define your scales from data to pixel space */
+
   const yScale = d3
     .scaleBand()
-    .domain(departmentsData.map((d) => d.department)) // აქ რა იქნება? სიესვი როგორ ავიღო?
+    .domain(classData.map((d) => d.classification))
     .range([height, 0]);
 
   const xScale = d3
-    .scaleLinear()
-    .domain([-800, d3.max(departmentsData.map((d) => d.count))])
+    .scaleLog()
+    .domain([0.5, d3.max(classData.map((d) => d.count)) + 1])
     .range([0, width]);
 
-  /* HTML ELEMENTS */
   // SVG
   const svg = d3
-    .select("#chart-1-container")
+    .select("#chart-2-container")
     .append("svg")
     .attr("width", width)
     .attr("height", height)
     .style("background-color", "aliceblue")
     .style("overflow", "visible");
-  //axis scales
-
-  // svg.append("g")
-  // .attr("transform", translate(${0},${height - margin.bottom})')
-  // .call(selection => selection.call(xAis))
-  // .attr("transform", 'translate(${margin.left},${0}))
-  /** Select your container and append the visual elements to it */
 
   // BARS
   const color = d3.scaleOrdinal(d3.schemeAccent);
   const bars = svg
     .selectAll("rect.bar")
-    .data(departmentsData)
+    .data(classData)
     .join("rect")
     .attr("class", "bar")
-    .attr("x", (d) => xScale(0))
-    .attr("y", (d) => yScale(d.department))
+    .attr("data-value", (d) => d.count)
+    .attr("x", (d) => {
+      return xScale(0);
+    })
+    .attr("y", (d) => yScale(d.classification))
     .attr("height", 50)
     .attr("width", 0)
     .style("fill", "tomato")
@@ -81,15 +65,42 @@ d3.csv("Artworks.csv", d3.autoType).then((data) => {
     .attr("width", function (d) {
       return xScale(d.count);
     })
-    .attr("height", 50)
+    .attr("height", 30)
     .style("fill", "orange");
 
-  const xAxisGroup = svg.append("g");
+  //Text
+  svg
+    .append("text")
+    .attr("x", width / 2)
+    .attr("y", height - margin.bottom + 110)
+    .style("text-anchor", "middle")
+    .attr("font-family", "Saira bold")
+    .attr("font-weight", function (d, i) {
+      return i * 100 + 100;
+    })
+    .text("Quantity of artwork");
+
   const yAxisGroup = svg.append("g");
 
   yAxisGroup.call(d3.axisLeft(yScale));
 
-  xAxisGroup
+  const xAxisGroup = d3
+    .axisBottom(xScale)
+    // numbers on the X axes
+    .tickValues([0, 1, 2, 4, 10, 30, 100, 300, 1000, 5000, 34126])
+    .tickFormat((d, i) => {
+      console.log(d, i);
+      return d;
+    });
+
+  svg
+    .append("g")
     .style("transform", `translate(0, ${height}px)`)
-    .call(d3.axisBottom(xScale));
+    .call(xAxisGroup);
+
+  // Bar Tooltips
+  tippy("rect.bar", {
+    content: (reference) => reference.getAttribute("data-value"),
+    color: "rgb(255, 165, 0)",
+  });
 });
